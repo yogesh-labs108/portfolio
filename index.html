@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yogesh T. — Building Products. Understanding Market. Driving Growth.</title>
+  <meta name="description" content="Portfolio of Yogesh T. — software engineer turned growth-minded builder. AI-assisted QA automation, content and engagement analysis, lifecycle growth and experimentation." />
+  <meta name="theme-color" content="#0a0a0a" />
+  <meta property="og:title" content="Yogesh T. — Portfolio" />
+  <meta property="og:description" content="Building Products. Understanding Market. Driving Growth." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/img/portrait.jpg" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0a0a'/%3E%3Ctext x='50%25' y='56%25' dominant-baseline='middle' text-anchor='middle' font-family='Impact,Arial Narrow,sans-serif' font-size='40' fill='%23f3ecd2'%3EY%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__inner">
+      <span class="preloader__name">YOGESH T.</span>
+      <span class="preloader__count" id="preloaderCount">0</span>
+      <div class="preloader__bar"><span id="preloaderBar"></span></div>
+    </div>
+  </div>
+
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <div class="cursor__dot"></div>
+    <div class="cursor__ring"><span class="cursor__label"></span></div>
+  </div>
+
+  <!-- Grain overlay -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Ambient blobs -->
+  <div class="ambient" aria-hidden="true">
+    <div class="ambient__blob ambient__blob--1" data-depth="0.04"></div>
+    <div class="ambient__blob ambient__blob--2" data-depth="0.07"></div>
+    <div class="ambient__blob ambient__blob--3" data-depth="0.03"></div>
+  </div>
+
+  <!-- Scroll progress -->
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <a href="#top" class="nav__logo" data-cursor="hover">Y<span>T.</span></a>
+    <nav class="nav__links" id="navLinks" aria-label="Primary">
+      <a href="#about" data-cursor="hover">About</a>
+      <a href="#journey" data-cursor="hover">Journey</a>
+      <a href="#toolkit" data-cursor="hover">Toolkit</a>
+      <a href="#work" data-cursor="hover">Work</a>
+      <a href="#process" data-cursor="hover">Process</a>
+      <a href="#pocketfm" data-cursor="hover">Pocket FM</a>
+      <a href="#contact" class="nav__cta" data-cursor="hover">Let's talk</a>
+    </nav>
+    <button class="nav__burger" id="navBurger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <main id="top">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="hero">
+      <div class="hero__wave hero__wave--tl" aria-hidden="true"></div>
+      <div class="hero__wave hero__wave--br" aria-hidden="true"></div>
+      <div class="hero__grid" aria-hidden="true"></div>
+
+      <div class="hero__content">
+        <p class="hero__eyebrow reveal"><span class="pulse"></span> Open to growth &amp; product roles</p>
+        <h1 class="hero__title" id="heroTitle" aria-label="Yogesh T.">
+          <span class="hero__word" data-split>YOGESH</span>
+          <span class="hero__word hero__word--accent" data-split>T.</span>
+        </h1>
+        <p class="hero__tagline reveal" data-delay="600">
+          <span class="rotate" id="rotator">
+            <span class="rotate__item is-active">Building Products.</span>
+            <span class="rotate__item">Understanding Market.</span>
+            <span class="rotate__item">Driving Growth.</span>
+          </span>
+        </p>
+        <div class="hero__actions reveal" data-delay="800">
+          <a href="#about" class="btn btn--primary magnetic" data-cursor="hover">
+            <span>View my portfolio</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+          </a>
+          <a href="#work" class="btn btn--ghost magnetic" data-cursor="hover"><span>See what I've built</span></a>
+        </div>
+      </div>
+
+      <div class="hero__scroll reveal" data-delay="1200" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="hero__scroll-line"></div>
+      </div>
+
+      <div class="hero__meta reveal" data-delay="1000">
+        <span>Software Engineer → Growth</span>
+        <span>AI-native builder</span>
+        <span>India · Remote</span>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="section about" id="about">
+      <div class="container about__grid">
+        <div class="about__media reveal">
+          <div class="portrait tilt" data-tilt>
+            <div class="portrait__glow"></div>
+            <img src="assets/img/portrait.jpg" alt="Portrait of Yogesh T." width="672" height="843" loading="eager" />
+            <div class="portrait__badge">
+              <span class="portrait__badge-dot"></span> Available for work
+            </div>
+          </div>
+          <div class="about__stats">
+            <div class="stat">
+              <span class="stat__num"><span data-count="25">0</span>K</span>
+              <span class="stat__label">AI tokens saved per run</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num"><span data-count="2">0</span></span>
+              <span class="stat__label">AI products shipped</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num"><span data-count="3">0</span></span>
+              <span class="stat__label">Growth focus areas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about__copy">
+          <h2 class="heading reveal">
+            <span class="heading__line">About</span>
+            <span class="heading__line heading__line--muted">Me</span>
+          </h2>
+          <p class="about__lead reveal" data-delay="100">
+            I build with logic.<br />I think beyond the code.
+          </p>
+          <p class="reveal" data-delay="200">
+            I'm a <mark>tech-savvy professional</mark> with a passion for solving problems, understanding user behavior, and <mark>turning ideas into measurable outcomes</mark>.
+          </p>
+          <p class="reveal" data-delay="300">
+            With a <mark>background in software engineering and hands-on experience with AI-powered tools</mark>, I bring a technical, analytical, and solution-oriented approach to product and business challenges.
+          </p>
+          <p class="reveal" data-delay="400">
+            I'm particularly interested in the <mark>intersection of technology, user engagement, experimentation, and business growth</mark>.
+          </p>
+          <div class="about__tags reveal" data-delay="500">
+            <span>Product thinking</span><span>Experimentation</span><span>User behavior</span><span>AI workflows</span><span>Growth strategy</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EDUCATION ===================== -->
+    <section class="section education" id="education">
+      <div class="container">
+        <div class="education__grid">
+          <h2 class="heading heading--stack reveal">
+            <span class="heading__line">Education</span>
+            <span class="heading__line heading__line--muted"><em>&amp;</em> Beyond</span>
+            <span class="heading__line">Academics</span>
+          </h2>
+
+          <div class="timeline">
+            <div class="timeline__line" aria-hidden="true"><span id="timelineFill"></span></div>
+
+            <article class="timeline__item reveal">
+              <div class="timeline__dot"></div>
+              <div class="card card--outline">
+                <div class="card__pips" aria-hidden="true"><i></i><i></i><i></i></div>
+                <h3 class="card__title">Anna University</h3>
+                <p class="card__sub">Kumaraguru College of Technology</p>
+                <p class="card__hl">BE, Electronics and Communication Engineering</p>
+              </div>
+            </article>
+
+            <article class="timeline__item reveal" data-delay="150">
+              <div class="timeline__dot"></div>
+              <div class="card card--outline">
+                <div class="card__pips" aria-hidden="true"><i></i><i></i><i></i></div>
+                <h3 class="card__title">RAC — Robotics and Automation Club</h3>
+                <div class="role">
+                  <h4>Growth Strategist <span>| Sep 2022 – Mar 2024</span></h4>
+                  <p>Contributed to ideation and strategic planning for club development and initiatives.</p>
+                </div>
+                <div class="role">
+                  <h4>Software Developer <span>| Jan 2021 – Sep 2022</span></h4>
+                  <p>Gained hands-on exposure to software development, technical collaboration, and problem-solving.</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== JOURNEY ===================== -->
+    <section class="section journey" id="journey">
+      <div class="container">
+        <h2 class="heading heading--center reveal">
+          <span class="heading__line">Professional</span>
+          <span class="heading__line heading__line--muted">Journey</span>
+        </h2>
+
+        <div class="journey__grid">
+          <article class="exp tilt reveal" data-tilt data-cursor="hover">
+            <div class="exp__logo exp__logo--arcadia">
+              <img src="assets/img/logo-arcadia.png" alt="Arcadia logo" width="313" height="313" loading="lazy" />
+            </div>
+            <div class="exp__pill">
+              <strong>Arcadia — Washington, D.C., USA</strong>
+              <span>Software Engineer II</span>
+            </div>
+            <p>Developed and maintained technical solutions, resolved complex engineering challenges, and collaborated across teams to improve system reliability, streamline workflows, and deliver efficient solutions.</p>
+            <ul class="exp__chips">
+              <li>System reliability</li><li>Workflow automation</li><li>Cross-team delivery</li>
+            </ul>
+          </article>
+
+          <article class="exp tilt reveal" data-tilt data-delay="150" data-cursor="hover">
+            <div class="exp__logo exp__logo--clickby">
+              <img src="assets/img/logo-clickby.png" alt="ClickBy Digital logo" width="313" height="300" loading="lazy" />
+            </div>
+            <div class="exp__pill">
+              <strong>ClickBy Digital Pvt. Ltd. — Jharkhand, India</strong>
+              <span>Growth &amp; Digital Strategy Associate Manager</span>
+            </div>
+            <p>Supported growth initiatives by analyzing performance metrics, identifying optimization opportunities, and contributing to strategies aimed at improving user engagement, conversion rates, and overall business performance.</p>
+            <ul class="exp__chips">
+              <li>Performance metrics</li><li>Conversion optimization</li><li>Engagement strategy</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TOOLKIT ===================== -->
+    <section class="section toolkit" id="toolkit">
+      <div class="container">
+        <h2 class="heading heading--center reveal">
+          <span class="heading__line">AI &amp; Tech</span>
+          <span class="heading__line heading__line--muted">Toolkit</span>
+        </h2>
+      </div>
+
+      <div class="marquee reveal" data-direction="left">
+        <div class="marquee__track">
+          <div class="tool tool--wordmark"><img src="assets/img/tool-claude.png" alt="Claude" loading="lazy" /></div>
+          <div class="tool"><img src="assets/img/tool-chatgpt.png" alt="" loading="lazy" /><span>ChatGPT</span></div>
+          <div class="tool"><img src="assets/img/tool-cursor.png" alt="" loading="lazy" /><span>Cursor</span></div>
+          <div class="tool tool--wordmark"><img src="assets/img/tool-gemini.png" alt="Gemini" loading="lazy" /></div>
+          <div class="tool tool--wordmark"><img src="assets/img/tool-genai.png" alt="GenAI" loading="lazy" /></div>
+          <div class="tool tool--mono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><circle cx="4" cy="6" r="1.6"/><circle cx="20" cy="6" r="1.6"/><circle cx="4" cy="18" r="1.6"/><circle cx="20" cy="18" r="1.6"/><path d="M9.5 10.5 5.3 7M14.5 10.5l4.2-3.5M9.5 13.5 5.3 17M14.5 13.5l4.2 3.5"/></svg><span>LLMs</span></div>
+          <div class="tool tool--mono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m8 9-4 3 4 3M16 9l4 3-4 3M14 5l-4 14"/></svg><span>Engineering</span></div>
+        </div>
+      </div>
+
+      <div class="marquee reveal" data-direction="right" data-delay="100">
+        <div class="marquee__track">
+          <div class="tool tool--text">Python</div>
+          <div class="tool tool--text">Bash</div>
+          <div class="tool tool--text">Java</div>
+          <div class="tool tool--text">Cursor Skills &amp; Workflows</div>
+          <div class="tool tool--text">Prompt Engineering</div>
+          <div class="tool tool--text">Automation</div>
+          <div class="tool tool--text">Experimentation</div>
+          <div class="tool tool--text">Analytics</div>
+          <div class="tool tool--text">Growth Strategy</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== WORK ===================== -->
+    <section class="section work" id="work">
+      <div class="container">
+        <h2 class="heading heading--center reveal">
+          <span class="heading__line">What I've</span>
+          <span class="heading__line heading__line--muted">Built</span>
+        </h2>
+        <p class="section__sub reveal" data-delay="100">Practical applications of AI, automation, and growth-focused problem-solving.</p>
+
+        <div class="work__index reveal" data-delay="200">
+          <button class="work__tab is-active" data-project="eqv" data-cursor="hover">
+            <span class="work__tab-num">Project 01</span>
+            <img src="assets/img/icon-eqv.png" alt="" loading="lazy" />
+            <strong>Extraction Quality Validator</strong>
+            <span>AI-Assisted QA Automation</span>
+          </button>
+          <button class="work__tab" data-project="preflight" data-cursor="hover">
+            <span class="work__tab-num">Project 02</span>
+            <img src="assets/img/icon-preflight.png" alt="" loading="lazy" />
+            <strong>PreFlight</strong>
+            <span>AI-Powered Content &amp; Engagement Analysis</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Project 01 -->
+      <article class="project" id="project-eqv" data-project-panel="eqv">
+        <div class="container project__grid">
+          <div class="project__visual reveal">
+            <h3 class="heading heading--sm">
+              <span class="heading__line">What is</span>
+              <span class="heading__line heading__line--muted">EQV?</span>
+            </h3>
+            <div class="laptop tilt" data-tilt data-cursor="view" data-lightbox="assets/img/shot-eqv.png" data-lightbox-title="Extraction Quality Validator">
+              <div class="laptop__screen">
+                <img src="assets/img/shot-eqv.png" alt="Extraction Quality Validator interface" width="615" height="383" loading="lazy" />
+              </div>
+              <div class="laptop__base"></div>
+            </div>
+          </div>
+
+          <div class="project__copy">
+            <p class="project__intro reveal">Extraction Quality Validator is an AI-assisted checker for utility-bill extraction. You give it the original bill, the extraction log, and the ticket.</p>
+
+            <div class="accordion reveal" data-delay="100">
+              <details open>
+                <summary data-cursor="hover">What I built</summary>
+                <p>A Cursor workflow that compares the bill with the extracted data, sorts the audit errors, reviews the Java template, and writes a ticket-ready report.</p>
+              </details>
+              <details open>
+                <summary data-cursor="hover">Stack</summary>
+                <ul class="stack"><li>Cursor</li><li>Claude</li><li>Python</li><li>Bash</li></ul>
+              </details>
+              <details open>
+                <summary data-cursor="hover">My part</summary>
+                <p>The repetitive log reading runs as local scripts, so the model is only used for the judgment. That cut about <strong>20–25K tokens</strong> of AI work on every run.</p>
+              </details>
+              <details open>
+                <summary data-cursor="hover">Impact</summary>
+                <ul class="impact">
+                  <li>Reduced unnecessary AI processing</li>
+                  <li>Streamlined error investigation and standardized ticket-ready reporting</li>
+                </ul>
+              </details>
+            </div>
+
+            <div class="project__flow reveal" data-delay="200" aria-label="Pipeline">
+              <span>Bill</span><i></i><span>Extraction log</span><i></i><span>Scripts sort errors</span><i></i><span>Model judges</span><i></i><span>Ticket-ready report</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 02 -->
+      <article class="project project--alt" id="project-preflight" data-project-panel="preflight">
+        <div class="container project__grid">
+          <div class="project__copy">
+            <p class="project__intro reveal">PreFlight is an AI check that reads a web novel before anyone records it as an audio series.</p>
+
+            <div class="accordion reveal" data-delay="100">
+              <details open>
+                <summary data-cursor="hover">What I built</summary>
+                <p>A Cursor skill that finds where listeners are likely to drop off, quotes the passage that causes it, turns chapters into episodes that end on a cliffhanger, and rewrites the weak opening and ending.</p>
+              </details>
+              <details open>
+                <summary data-cursor="hover">Stack</summary>
+                <ul class="stack"><li>Claude</li><li>Python</li></ul>
+              </details>
+              <details open>
+                <summary data-cursor="hover">My part</summary>
+                <p>Chapter length, new names, and episode splits are measured by a script. The model does the reading and the rewrite, and every reason it gives has to be backed by a line from the novel. The check happens <strong>before production, instead of after launch</strong>.</p>
+              </details>
+              <details open>
+                <summary data-cursor="hover">Impact</summary>
+                <ul class="impact">
+                  <li>Identifies story-level risks early</li>
+                  <li>Strengthens episode structure</li>
+                  <li>Makes content review more systematic</li>
+                </ul>
+              </details>
+            </div>
+
+            <div class="project__flow reveal" data-delay="200" aria-label="Pipeline">
+              <span>Web novel</span><i></i><span>Script measures</span><i></i><span>Model reads</span><i></i><span>Drop-off risks quoted</span><i></i><span>Episode cuts &amp; rewrites</span>
+            </div>
+          </div>
+
+          <div class="project__visual reveal">
+            <h3 class="heading heading--sm">
+              <span class="heading__line">What is</span>
+              <span class="heading__line heading__line--muted">PreFlight?</span>
+            </h3>
+            <div class="laptop tilt" data-tilt data-cursor="view" data-lightbox="assets/img/shot-preflight.png" data-lightbox-title="PreFlight">
+              <div class="laptop__screen">
+                <img src="assets/img/shot-preflight.png" alt="PreFlight interface" width="615" height="383" loading="lazy" />
+              </div>
+              <div class="laptop__base"></div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ===================== PROCESS ===================== -->
+    <section class="section process" id="process">
+      <div class="container">
+        <h2 class="heading heading--center reveal">
+          <span class="heading__line">How I <span class="heading__line--muted">Work?</span></span>
+        </h2>
+        <p class="ribbon reveal" data-delay="100">Curious enough to question the obvious. Practical enough to ship.</p>
+
+        <div class="principles">
+          <article class="principle reveal" data-cursor="hover">
+            <span class="principle__num">01</span>
+            <h3>I start with the problem.</h3>
+            <p>Before suggesting a solution, I want to understand who experiences the problem, how often it occurs, and why it matters.</p>
+          </article>
+          <article class="principle reveal" data-delay="80" data-cursor="hover">
+            <span class="principle__num">02</span>
+            <h3>I use data to reduce guesswork.</h3>
+            <p>I value evidence, but I also pay attention to its limitations. A metric is useful only when its definition and context are clear.</p>
+          </article>
+          <article class="principle reveal" data-delay="160" data-cursor="hover">
+            <span class="principle__num">03</span>
+            <h3>I prefer small, meaningful experiments.</h3>
+            <p>Rather than committing to a large initiative based on an untested assumption, I'd rather identify a focused experiment that can teach us something useful.</p>
+          </article>
+          <article class="principle reveal" data-delay="240" data-cursor="hover">
+            <span class="principle__num">04</span>
+            <h3>I work across disciplines.</h3>
+            <p>Growth problems rarely belong to a single team. I value clear communication and shared ownership between technical, creative and business stakeholders.</p>
+          </article>
+          <article class="principle reveal" data-delay="320" data-cursor="hover">
+            <span class="principle__num">05</span>
+            <h3>I use AI with intention.</h3>
+            <p>I look for ways to accelerate research, analysis, prototyping, and repetitive tasks while preserving human judgment and accountability.</p>
+          </article>
+          <article class="principle reveal" data-delay="400" data-cursor="hover">
+            <span class="principle__num">06</span>
+            <h3>I care about sustainable results.</h3>
+            <p>An increase in clicks means little if users do not find value. I want to understand the relationship between short-term performance and long-term customer behavior.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== POCKET FM ===================== -->
+    <section class="section pocketfm" id="pocketfm">
+      <div class="container">
+        <h2 class="heading heading--center reveal">
+          <span class="heading__line">Why <span class="heading__line--red">Pocket FM</span>?</span>
+        </h2>
+        <p class="ribbon reveal" data-delay="100">Why not? After all, the product experience is the growth engine.</p>
+
+        <div class="pocketfm__intro reveal" data-delay="150">
+          <p>Pocket FM operates in a category where user engagement is closely connected to the experience itself. Discovery, storytelling, episode continuation, personalization, and monetization all contribute to the relationship between the listener and the platform.</p>
+          <p>That makes it an interesting environment for someone who wants to combine technical problem-solving with growth. I'm particularly interested in three areas:</p>
+        </div>
+
+        <div class="focus">
+          <article class="focus__card reveal" data-cursor="hover">
+            <div class="focus__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg></div>
+            <h3>Lifecycle growth and retention</h3>
+            <p>Understanding what makes users return and developing experiments that help build sustained engagement.</p>
+          </article>
+          <article class="focus__card reveal" data-delay="120" data-cursor="hover">
+            <div class="focus__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 19V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v14"/><path d="M4 19a2 2 0 0 0 2 2h14"/><path d="M8 7h8M8 11h6"/></svg></div>
+            <h3>Content-led growth</h3>
+            <p>Exploring how discovery, listener preferences, and content performance can help users find stories they want to continue.</p>
+          </article>
+          <article class="focus__card reveal" data-delay="240" data-cursor="hover">
+            <div class="focus__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l1.8 4.6L18 9l-4.2 1.4L12 15l-1.8-4.6L6 9l4.2-1.4z"/><path d="M5 17l.9 2.1L8 20l-2.1.9L5 23l-.9-2.1L2 20l2.1-.9z"/><path d="M19 15l.7 1.6 1.6.7-1.6.7L19 19.6l-.7-1.6-1.6-.7 1.6-.7z"/></svg></div>
+            <h3>AI-native growth operations</h3>
+            <p>Using AI and automation to accelerate research, experimentation, personalization, and execution while maintaining quality.</p>
+          </article>
+        </div>
+
+        <blockquote class="pocketfm__outro reveal" data-delay="200">
+          I would bring an engineer's approach to problem-solving, a willingness to work hands-on, and a strong interest in learning how growth decisions translate into measurable business outcomes.
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section contact" id="contact">
+      <div class="contact__wave contact__wave--l" aria-hidden="true"></div>
+      <div class="contact__wave contact__wave--r" aria-hidden="true"></div>
+
+      <div class="container">
+        <h2 class="heading heading--center heading--xl reveal">
+          <span class="heading__line">Let's <span class="heading__line--muted">Talk!</span></span>
+        </h2>
+        <p class="ribbon reveal" data-delay="100">Have a problem worth solving?</p>
+
+        <div class="contact__copy reveal" data-delay="150">
+          <p>I'm always interested in conversations about product growth, customer retention, experimentation, AI-enabled workflows, and the intersection of technology and business.</p>
+          <p>If you're building products, exploring new growth opportunities, or looking for someone who enjoys breaking complex problems into practical steps, I'd love to connect.</p>
+        </div>
+
+        <div class="contact__card reveal" data-delay="250">
+          <div class="contact__name">Yogesh T.</div>
+          <a class="contact__email magnetic" href="mailto:yogesht20022003@gmail.com" data-cursor="hover">yogesht20022003@gmail.com</a>
+          <div class="contact__row">
+            <a class="btn btn--primary magnetic" href="mailto:yogesht20022003@gmail.com?subject=Let%27s%20talk%20growth" data-cursor="hover"><span>Send an email</span></a>
+            <button class="btn btn--ghost magnetic" id="copyEmail" data-copy="yogesht20022003@gmail.com" data-cursor="hover"><span>Copy email</span></button>
+            <a class="btn btn--ghost magnetic" href="tel:+919080896537" data-cursor="hover"><span>+91 90808 96537</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__marquee" aria-hidden="true">
+      <div class="footer__track">
+        <span>Building Products.</span><span>Understanding Market.</span><span>Driving Growth.</span>
+        <span>Building Products.</span><span>Understanding Market.</span><span>Driving Growth.</span>
+      </div>
+    </div>
+    <div class="container footer__bar">
+      <span>© <span id="year"></span> Yogesh T.</span>
+      <span class="footer__time">Local time <span id="localTime">--:--</span> IST</span>
+      <a href="#top" class="footer__top" data-cursor="hover">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+    <button class="lightbox__close" id="lightboxClose" aria-label="Close" data-cursor="hover">×</button>
+    <figure>
+      <img id="lightboxImg" src="" alt="" />
+      <figcaption id="lightboxCap"></figcaption>
+    </figure>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
