@@ -286,7 +286,7 @@
               <div><dt>Languages</dt><dd>Java, Python, SQL</dd></div>
               <div><dt>Built with</dt><dd>Java parsers that turn utility bills and portal data into structured records</dd></div>
               <div><dt>Data</dt><dd>Account, usage and charge fields, audits, before-and-after bill diffs</dd></div>
-              <div><dt>Tools</dt><dd>Git, Cursor, Claude, Bash, Jira</dd></div>
+              <div><dt>Tools</dt><dd>Git, Cursor, Claude, FastAPI, Bash, Jira</dd></div>
             </dl>
           </article>
 
@@ -325,24 +325,108 @@
         <p class="section__sub reveal" data-delay="100">Practical applications of AI, automation, and growth-focused problem-solving.</p>
 
         <div class="work__index reveal" data-delay="200">
-          <button class="work__tab is-active" data-project="eqv" data-cursor="hover">
+          <button class="work__tab is-active" data-project="preflight" data-cursor="hover">
             <span class="work__tab-num">Project 01</span>
+            <img src="assets/img/icon-preflight.png" alt="" loading="lazy" />
+            <strong>PreFlight</strong>
+            <span>Pre-Production Story Analysis for Audio</span>
+          </button>
+          <button class="work__tab" data-project="eqv" data-cursor="hover">
+            <span class="work__tab-num">Project 02</span>
             <img src="assets/img/icon-eqv.png" alt="" loading="lazy" />
             <strong>Extraction Quality Validator</strong>
             <span>AI-Assisted QA Automation</span>
-          </button>
-          <button class="work__tab" data-project="preflight" data-cursor="hover">
-            <span class="work__tab-num">Project 02</span>
-            <img src="assets/img/icon-preflight.png" alt="" loading="lazy" />
-            <strong>PreFlight</strong>
-            <span>AI-Powered Content &amp; Engagement Analysis</span>
           </button>
         </div>
       </div>
 
       <!-- Project 01 -->
-      <article class="project" id="project-eqv" data-project-panel="eqv">
+      <article class="project" id="project-preflight" data-project-panel="preflight">
         <div class="container project__grid">
+          <div class="project__visual reveal">
+            <h3 class="heading heading--sm">
+              <span class="heading__line">What is</span>
+              <span class="heading__line heading__line--muted">PreFlight?</span>
+            </h3>
+            <div class="laptop tilt" data-tilt data-cursor="view" data-lightbox="assets/img/shot-preflight.png" data-lightbox-title="PreFlight — The Ninth Furnace, verdict ADAPT">
+              <div class="laptop__screen">
+                <img src="assets/img/shot-preflight.png" alt="PreFlight review board for the example novel The Ninth Furnace" width="615" height="383" loading="lazy" />
+              </div>
+              <div class="laptop__base"></div>
+            </div>
+          </div>
+
+          <div class="project__copy">
+            <p class="project__intro reveal">PreFlight reads a web novel before anyone records it as an audio series, and says where listeners will leave.</p>
+
+            <div class="accordion reveal" data-delay="100">
+              <details open>
+                <summary data-cursor="hover">What I built</summary>
+                <p>A Cursor skill and a review board. A script measures every chapter. Claude reads the novel against ten reasons listeners quit an audio show, quotes the line behind each one, cuts the chapters into episodes that end on a cliffhanger, and rewrites the weak opening and ending. The verdict is <strong>GO, ADAPT or HOLD</strong>.</p>
+              </details>
+              <details open>
+                <summary data-cursor="hover">Stack</summary>
+                <ul class="stack"><li>Cursor</li><li>Claude</li><li>Python</li><li>FastAPI</li></ul>
+              </details>
+              <details open>
+                <summary data-cursor="hover">My part</summary>
+                <p>Counting is code, so the same novel always gives the same draft. Judgement is the model, but every reason has to quote a line, and the code checks that the line is really in the chapter. A paraphrase gets flagged, not hidden. The check happens <strong>before production, instead of after launch</strong>.</p>
+              </details>
+              <details open>
+                <summary data-cursor="hover">Impact</summary>
+                <ul class="impact">
+                  <li>Finds drop-off risks before a single episode is recorded</li>
+                  <li>Every episode ends on an open question, not at rest</li>
+                  <li>Turns story review into a repeatable, evidence-backed check</li>
+                </ul>
+              </details>
+            </div>
+
+            <div class="project__flow reveal" data-delay="200" aria-label="Pipeline">
+              <span>Web novel</span><i></i><span>Script measures</span><i></i><span>Model reads</span><i></i><span>Risks quoted &amp; verified</span><i></i><span>Episode plan &amp; rewrites</span>
+            </div>
+
+            <div class="project__links reveal" data-delay="260">
+              <a class="btn btn--ghost magnetic" href="https://github.com/yogesh-labs108/preflight" target="_blank" rel="noopener" data-cursor="hover"><span>View PreFlight on GitHub ↗</span></a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 02 -->
+      <article class="project project--alt" id="project-eqv" data-project-panel="eqv">
+        <div class="container project__grid">
+          <div class="project__copy">
+            <p class="project__intro reveal">Extraction Quality Validator checks utility-bill extraction. Give it a ticket number and it fetches the bill and the extraction log, compares them field by field, and writes a ticket-ready report.</p>
+
+            <div class="accordion reveal" data-delay="100">
+              <details open>
+                <summary data-cursor="hover">What I built</summary>
+                <p>A Cursor workflow and a FastAPI app. A script pulls the bill and the log for the ticket, pairs each bill with its extraction, checks every amount, date and format against the bill, and flags what does not match. Claude is the second pass, for the judgment calls the rules cannot make.</p>
+              </details>
+              <details open>
+                <summary data-cursor="hover">Stack</summary>
+                <ul class="stack"><li>Cursor</li><li>Claude</li><li>Python</li><li>FastAPI</li><li>Bash</li></ul>
+              </details>
+              <details open>
+                <summary data-cursor="hover">My part</summary>
+                <p>The exact checks run as code, so the model is only called for judgment. That cut about <strong>20–25K tokens</strong> of AI work on every audit, and the same bill always gets the same answer.</p>
+              </details>
+              <details open>
+                <summary data-cursor="hover">Impact</summary>
+                <ul class="impact">
+                  <li>Ticket number in, ticket-ready report out</li>
+                  <li>Reduced unnecessary AI processing</li>
+                  <li>Standardized error investigation across tickets</li>
+                </ul>
+              </details>
+            </div>
+
+            <div class="project__flow reveal" data-delay="200" aria-label="Pipeline">
+              <span>Ticket</span><i></i><span>Fetch bill &amp; log</span><i></i><span>Script checks fields</span><i></i><span>Model judges the rest</span><i></i><span>Ticket-ready report</span>
+            </div>
+          </div>
+
           <div class="project__visual reveal">
             <h3 class="heading heading--sm">
               <span class="heading__line">What is</span>
@@ -351,85 +435,6 @@
             <div class="laptop tilt" data-tilt data-cursor="view" data-lightbox="assets/img/shot-eqv.png" data-lightbox-title="Extraction Quality Validator">
               <div class="laptop__screen">
                 <img src="assets/img/shot-eqv.png" alt="Extraction Quality Validator interface" width="615" height="383" loading="lazy" />
-              </div>
-              <div class="laptop__base"></div>
-            </div>
-          </div>
-
-          <div class="project__copy">
-            <p class="project__intro reveal">Extraction Quality Validator is an AI-assisted checker for utility-bill extraction. You give it the original bill, the extraction log, and the ticket.</p>
-
-            <div class="accordion reveal" data-delay="100">
-              <details open>
-                <summary data-cursor="hover">What I built</summary>
-                <p>A Cursor workflow that compares the bill with the extracted data, sorts the audit errors, reviews the Java template, and writes a ticket-ready report.</p>
-              </details>
-              <details open>
-                <summary data-cursor="hover">Stack</summary>
-                <ul class="stack"><li>Cursor</li><li>Claude</li><li>Python</li><li>Bash</li></ul>
-              </details>
-              <details open>
-                <summary data-cursor="hover">My part</summary>
-                <p>The repetitive log reading runs as local scripts, so the model is only used for the judgment. That cut about <strong>20–25K tokens</strong> of AI work on every run.</p>
-              </details>
-              <details open>
-                <summary data-cursor="hover">Impact</summary>
-                <ul class="impact">
-                  <li>Reduced unnecessary AI processing</li>
-                  <li>Streamlined error investigation and standardized ticket-ready reporting</li>
-                </ul>
-              </details>
-            </div>
-
-            <div class="project__flow reveal" data-delay="200" aria-label="Pipeline">
-              <span>Bill</span><i></i><span>Extraction log</span><i></i><span>Scripts sort errors</span><i></i><span>Model judges</span><i></i><span>Ticket-ready report</span>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <!-- Project 02 -->
-      <article class="project project--alt" id="project-preflight" data-project-panel="preflight">
-        <div class="container project__grid">
-          <div class="project__copy">
-            <p class="project__intro reveal">PreFlight is an AI check that reads a web novel before anyone records it as an audio series.</p>
-
-            <div class="accordion reveal" data-delay="100">
-              <details open>
-                <summary data-cursor="hover">What I built</summary>
-                <p>A Cursor skill that finds where listeners are likely to drop off, quotes the passage that causes it, turns chapters into episodes that end on a cliffhanger, and rewrites the weak opening and ending.</p>
-              </details>
-              <details open>
-                <summary data-cursor="hover">Stack</summary>
-                <ul class="stack"><li>Claude</li><li>Python</li></ul>
-              </details>
-              <details open>
-                <summary data-cursor="hover">My part</summary>
-                <p>Chapter length, new names, and episode splits are measured by a script. The model does the reading and the rewrite, and every reason it gives has to be backed by a line from the novel. The check happens <strong>before production, instead of after launch</strong>.</p>
-              </details>
-              <details open>
-                <summary data-cursor="hover">Impact</summary>
-                <ul class="impact">
-                  <li>Identifies story-level risks early</li>
-                  <li>Strengthens episode structure</li>
-                  <li>Makes content review more systematic</li>
-                </ul>
-              </details>
-            </div>
-
-            <div class="project__flow reveal" data-delay="200" aria-label="Pipeline">
-              <span>Web novel</span><i></i><span>Script measures</span><i></i><span>Model reads</span><i></i><span>Drop-off risks quoted</span><i></i><span>Episode cuts &amp; rewrites</span>
-            </div>
-          </div>
-
-          <div class="project__visual reveal">
-            <h3 class="heading heading--sm">
-              <span class="heading__line">What is</span>
-              <span class="heading__line heading__line--muted">PreFlight?</span>
-            </h3>
-            <div class="laptop tilt" data-tilt data-cursor="view" data-lightbox="assets/img/shot-preflight.png" data-lightbox-title="PreFlight">
-              <div class="laptop__screen">
-                <img src="assets/img/shot-preflight.png" alt="PreFlight interface" width="615" height="383" loading="lazy" />
               </div>
               <div class="laptop__base"></div>
             </div>

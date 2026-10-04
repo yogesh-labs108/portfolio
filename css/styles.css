@@ -794,6 +794,7 @@ main { position: relative; z-index: 1; }
 .project__flow i {
   width: 18px; height: 1px; background: var(--border-strong); position: relative; flex: none;
 }
+.project__links { margin-top: 26px; display: flex; gap: 12px; flex-wrap: wrap; }
 .project__flow i::after {
   content: ""; position: absolute; right: -1px; top: -3px; border: 3.5px solid transparent; border-left-color: var(--violet);
 }
