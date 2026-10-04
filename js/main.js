@@ -307,7 +307,12 @@
      Marquee: duplicate track content for seamless loop
      ---------------------------------------------------------- */
   $$(".marquee__track, .footer__track").forEach((track) => {
-    track.innerHTML += track.innerHTML;
+    Array.from(track.children).forEach((child) => {
+      const clone = child.cloneNode(true);
+      clone.classList.add("is-clone");
+      clone.setAttribute("aria-hidden", "true");
+      track.appendChild(clone);
+    });
     const n = track.children.length;
     track.style.setProperty("--speed", Math.max(20, n * 2.2) + "s");
   });
@@ -397,4 +402,21 @@
   const tickClock = () => (clock.textContent = fmt.format(new Date()));
   tickClock();
   setInterval(tickClock, 30000);
+
+  /* ----------------------------------------------------------
+     Print / PDF: settle every animation into its final state
+     (also used when the page is opened with ?print=1)
+     ---------------------------------------------------------- */
+  const settleForPrint = () => {
+    if (document.body.classList.contains("is-loading")) finishPreloader();
+    heroTitle.classList.add("is-in");
+    $$(".reveal").forEach((el) => { el.style.setProperty("--d", "0ms"); el.classList.add("is-visible"); });
+    $$("[data-count]").forEach((el) => (el.textContent = el.dataset.count));
+    if (timelineFill) timelineFill.style.height = "100%";
+  };
+  window.addEventListener("beforeprint", settleForPrint);
+  if (new URLSearchParams(location.search).has("print")) {
+    document.documentElement.classList.add("is-print");
+    settleForPrint();
+  }
 })();

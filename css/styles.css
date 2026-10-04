@@ -959,3 +959,68 @@ main { position: relative; z-index: 1; }
   .grain { display: none; }
   .marquee__track, .footer__track { animation: none; }
 }
+
+/* ------------------------------------------------------------
+   Print / PDF export
+   ------------------------------------------------------------ */
+@media print {
+  /* A4 proportions at desktop width so the full multi-column layout is used */
+  @page { size: 1240px 1754px; margin: 0; }
+  *, *::before, *::after {
+    animation: none !important; transition: none !important;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  html, body { background: var(--bg) !important; }
+  html { scroll-behavior: auto; }
+  body { overflow: visible; }
+  .preloader, .cursor, .grain, .ambient, .progress, .nav, .hero__scroll,
+  .lightbox, .toast, .footer__marquee, .is-clone, .portrait__glow { display: none !important; }
+
+  .reveal, .hero__char { opacity: 1 !important; transform: none !important; }
+  .rotate__item { opacity: 1; transform: none; filter: none; }
+  .rotate__item:not(:first-child) { display: none; }
+
+  .section { padding-block: 90px; break-before: page; }
+  /* One section per page, content vertically centred like a slide.
+     .work is left as normal flow since it spans two pages. */
+  .section:not(.work) { min-height: 100vh; display: grid; align-content: center; }
+  .project--alt { min-height: calc(100vh - 90px); display: grid; align-content: center; }
+  .hero { min-height: 100vh; padding: 80px 60px; break-after: page; }
+  .hero__wave { filter: none; }
+  .hero__meta { position: absolute; bottom: 60px; right: 60px; display: flex; }
+  .project { break-inside: avoid; padding-top: 70px; }
+  .project--alt { break-before: page; padding-top: 110px; }
+  .card, .exp, .skill, .principle, .focus__card, .contact__card, .stat, .pocketfm__outro,
+  .laptop, .accordion details, .work__tab { break-inside: avoid; }
+  .education .heading { position: static; }
+  .timeline__line span { height: 100% !important; }
+
+  .marquee { mask-image: none; -webkit-mask-image: none; }
+  .marquee__track { width: auto; flex-wrap: wrap; justify-content: center; gap: 12px; }
+  .tool { box-shadow: none; }
+  .tool--wordmark img { mix-blend-mode: normal; }
+
+  /* Desktop layout regardless of the printing window's viewport */
+  .heading { font-size: 7rem; }
+  .heading--sm { font-size: 4.6rem; }
+  .heading--xl { font-size: 10rem; }
+  .hero__title { font-size: 15rem; }
+  .hero__tagline { font-size: 1.35rem; }
+  .about__lead { font-size: 1.5rem; }
+  .about__grid { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 80px; }
+  .education__grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 70px; }
+  .journey__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .skills { grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: none; }
+  .work__index { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .project__grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 60px; }
+  .project--alt .project__visual { order: 0; }
+  .principles { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .focus { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .skills, .principles, .focus { break-inside: auto; }
+
+  .skill__list li::before, .impact li::before, .timeline__dot, .portrait__badge-dot, .pulse { box-shadow: none; }
+  .portrait img, .exp__logo, .laptop__screen, .tool { box-shadow: none; }
+  .contact { padding-bottom: 90px; }
+  .contact__wave { display: none; }
+  .footer { display: none; }
+}
