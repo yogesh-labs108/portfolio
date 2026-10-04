@@ -991,6 +991,9 @@ main { position: relative; z-index: 1; }
   .hero__meta { position: absolute; bottom: 60px; right: 60px; display: flex; }
   .project { break-inside: avoid; padding-top: 70px; }
   .project--alt { break-before: page; padding-top: 110px; }
+  .work .section__sub { margin-bottom: 0; }
+  .work__index { margin-top: 30px; }
+  .project:not(.project--alt) { padding-top: 36px; }
   .card, .exp, .skill, .principle, .focus__card, .contact__card, .stat, .pocketfm__outro,
   .laptop, .accordion details, .work__tab { break-inside: avoid; }
   .education .heading { position: static; }

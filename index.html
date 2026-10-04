@@ -357,33 +357,33 @@
           </div>
 
           <div class="project__copy">
-            <p class="project__intro reveal">PreFlight reads a web novel before anyone records it as an audio series, and says where listeners will leave.</p>
+            <p class="project__intro reveal">PreFlight reads a web novel before it is recorded as an audio series, shows where listeners are likely to stop listening, and how to fix it.</p>
 
             <div class="accordion reveal" data-delay="100">
               <details open>
                 <summary data-cursor="hover">What I built</summary>
-                <p>A Cursor skill and a review board. A script measures every chapter. Claude reads the novel against ten reasons listeners quit an audio show, quotes the line behind each one, cuts the chapters into episodes that end on a cliffhanger, and rewrites the weak opening and ending. The verdict is <strong>GO, ADAPT or HOLD</strong>.</p>
+                <p>A story review tool. It reads the chapters, points to the exact lines where listeners may lose interest, splits the chapters into episodes that each end on a cliffhanger, and rewrites weak openings and endings. Every novel gets one of three results: <strong>GO</strong> (ready to record), <strong>ADAPT</strong> (fix the episode plan first) or <strong>HOLD</strong> (the story itself needs work).</p>
               </details>
               <details open>
                 <summary data-cursor="hover">Stack</summary>
-                <ul class="stack"><li>Cursor</li><li>Claude</li><li>Python</li><li>FastAPI</li></ul>
+                <ul class="stack"><li>Cursor</li><li>Python</li><li>FastAPI</li></ul>
               </details>
               <details open>
                 <summary data-cursor="hover">My part</summary>
-                <p>Counting is code, so the same novel always gives the same draft. Judgement is the model, but every reason has to quote a line, and the code checks that the line is really in the chapter. A paraphrase gets flagged, not hidden. The check happens <strong>before production, instead of after launch</strong>.</p>
+                <p>I split the work in two. Python does the counting: how long each chapter is, how many new names it brings in, and where the episodes break. AI does the reading and the rewriting. Every problem it points out must quote a real line from the novel, and the tool checks that the line actually exists, so nothing is made up. All of this happens <strong>before production, not after launch</strong>.</p>
               </details>
               <details open>
                 <summary data-cursor="hover">Impact</summary>
                 <ul class="impact">
-                  <li>Finds drop-off risks before a single episode is recorded</li>
-                  <li>Every episode ends on an open question, not at rest</li>
-                  <li>Turns story review into a repeatable, evidence-backed check</li>
+                  <li>Spots weak episodes before any money is spent on recording</li>
+                  <li>Every episode ends on a hook that brings listeners back</li>
+                  <li>Makes story review faster and consistent</li>
                 </ul>
               </details>
             </div>
 
             <div class="project__flow reveal" data-delay="200" aria-label="Pipeline">
-              <span>Web novel</span><i></i><span>Script measures</span><i></i><span>Model reads</span><i></i><span>Risks quoted &amp; verified</span><i></i><span>Episode plan &amp; rewrites</span>
+              <span>Web novel</span><i></i><span>Python measures</span><i></i><span>AI reads</span><i></i><span>Problems backed by quotes</span><i></i><span>Episode plan &amp; rewrites</span>
             </div>
 
             <div class="project__links reveal" data-delay="260">
