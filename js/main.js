@@ -294,7 +294,7 @@
       });
     });
 
-    $$(".principle, .exp").forEach((el) => {
+    $$(".principle, .exp, .skill").forEach((el) => {
       el.addEventListener("mousemove", (e) => {
         const r = el.getBoundingClientRect();
         el.style.setProperty("--mx", ((e.clientX - r.left) / r.width) * 100 + "%");
