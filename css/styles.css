@@ -651,7 +651,8 @@ main { position: relative; z-index: 1; }
 }
 .tool--text:hover { background: var(--surface-2); border-color: var(--border-strong); }
 
-.skills { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 60px; }
+.skills { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 36px; }
+.toolkit .heading--sm { margin-top: 56px; margin-bottom: 0; }
 @media (max-width: 960px) { .skills { grid-template-columns: 1fr; max-width: 640px; margin-inline: auto; } }
 .skill {
   position: relative; padding: 30px 28px 32px; border-radius: var(--radius);
@@ -989,6 +990,7 @@ main { position: relative; z-index: 1; }
   /* One section per page, content vertically centred like a slide.
      .work is left as normal flow since it spans two pages. */
   .section:not(.work) { min-height: 100vh; display: grid; align-content: center; }
+  .toolkit { min-height: 0; display: block; padding-block: 48px; }
   .project--alt { min-height: calc(100vh - 90px); display: grid; align-content: center; }
   .hero { min-height: 100vh; padding: 80px 60px; break-after: page; }
   .hero__wave { filter: none; }
@@ -1011,6 +1013,8 @@ main { position: relative; z-index: 1; }
   /* Desktop layout regardless of the printing window's viewport */
   .heading { font-size: 7rem; }
   .heading--sm { font-size: 4.6rem; }
+  .toolkit .heading--sm { margin-top: 24px; font-size: 3.4rem; }
+  .toolkit .skills { margin-top: 18px; }
   .heading--xl { font-size: 10rem; }
   .hero__title { font-size: 15rem; }
   .hero__tagline { font-size: 1.35rem; }
