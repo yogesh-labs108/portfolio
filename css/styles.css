@@ -617,7 +617,7 @@ main { position: relative; z-index: 1; }
 /* ------------------------------------------------------------
    Toolkit marquee
    ------------------------------------------------------------ */
-.toolkit .heading { margin-bottom: 50px; }
+.toolkit .heading, .genres .heading { margin-bottom: 50px; }
 .marquee {
   position: relative; overflow: hidden; padding-block: 12px;
   mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
@@ -651,8 +651,7 @@ main { position: relative; z-index: 1; }
 }
 .tool--text:hover { background: var(--surface-2); border-color: var(--border-strong); }
 
-.skills { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 36px; }
-.toolkit .heading--sm { margin-top: 56px; margin-bottom: 0; }
+.skills { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 48px; }
 @media (max-width: 960px) { .skills { grid-template-columns: 1fr; max-width: 640px; margin-inline: auto; } }
 .skill {
   position: relative; padding: 30px 28px 32px; border-radius: var(--radius);
@@ -673,8 +672,6 @@ main { position: relative; z-index: 1; }
 }
 .skill h3:has(+ .skill__sub) { margin-bottom: 6px; }
 .skill__sub { margin: 0 0 20px; color: var(--text-dim); font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; font-weight: 600; }
-.skill__genres-title { margin: 24px 0 6px; font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; color: var(--violet-2); font-weight: 700; }
-.skill__genres { margin: 0; color: var(--text-dim); font-size: .9rem; line-height: 1.6; }
 .skill__rows { margin: 0; display: grid; gap: 14px; }
 .skill__rows dt { font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; color: var(--violet-2); font-weight: 700; }
 .skill__rows dd { margin: 3px 0 0; color: var(--text-dim); font-size: .9rem; line-height: 1.5; }
@@ -990,7 +987,7 @@ main { position: relative; z-index: 1; }
   /* One section per page, content vertically centred like a slide.
      .work is left as normal flow since it spans two pages. */
   .section:not(.work) { min-height: 100vh; display: grid; align-content: center; }
-  .toolkit { min-height: 0; display: block; padding-block: 48px; }
+  .bring { min-height: 0; display: block; padding-block: 48px; }
   .project--alt { min-height: calc(100vh - 90px); display: grid; align-content: center; }
   .hero { min-height: 100vh; padding: 80px 60px; break-after: page; }
   .hero__wave { filter: none; }
@@ -1013,8 +1010,11 @@ main { position: relative; z-index: 1; }
   /* Desktop layout regardless of the printing window's viewport */
   .heading { font-size: 7rem; }
   .heading--sm { font-size: 4.6rem; }
-  .toolkit .heading--sm { margin-top: 24px; font-size: 3.4rem; }
-  .toolkit .skills { margin-top: 18px; }
+  .bring .heading { font-size: 5rem; margin-bottom: 8px; }
+  .bring .skills { margin-top: 28px; }
+  .bring .skill { padding: 22px 22px 24px; }
+  .bring .skill h3 { font-size: 1.55rem; margin-bottom: 4px; }
+  .bring .skill__rows { gap: 8px; }
   .heading--xl { font-size: 10rem; }
   .hero__title { font-size: 15rem; }
   .hero__tagline { font-size: 1.35rem; }
