@@ -395,6 +395,12 @@
             <strong>Extraction Quality Validator</strong>
             <span>AI-Assisted QA Automation</span>
           </button>
+          <button class="work__tab" data-project="growth" data-cursor="hover">
+            <span class="work__tab-num">Project 03</span>
+            <img src="assets/img/icon-growth.png" alt="" loading="lazy" />
+            <strong>Retention &amp; Growth Lab</strong>
+            <span>SQL Retention, Experiments &amp; Unit Economics</span>
+          </button>
         </div>
       </div>
 
@@ -495,6 +501,61 @@
                 <img src="assets/img/shot-eqv.png" alt="Extraction Quality Validator interface" width="615" height="383" loading="lazy" />
               </div>
               <div class="laptop__base"></div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 03 -->
+      <article class="project" id="project-growth" data-project-panel="growth">
+        <div class="container project__grid">
+          <div class="project__visual reveal">
+            <h3 class="heading heading--sm">
+              <span class="heading__line">What is the</span>
+              <span class="heading__line heading__line--muted">Growth Lab?</span>
+            </h3>
+            <div class="laptop tilt" data-tilt data-cursor="view" data-lightbox="assets/img/shot-growth.png" data-lightbox-title="Retention &amp; Growth Lab">
+              <div class="laptop__screen">
+                <img src="assets/img/shot-growth.png" alt="Retention and Growth Lab summary board" width="615" height="383" loading="lazy" />
+              </div>
+              <div class="laptop__base"></div>
+            </div>
+          </div>
+
+          <div class="project__copy">
+            <p class="project__intro reveal">A retention lab on 3.42 million real grocery orders. It finds which quiet users are actually at risk, designs the first experiment, and checks whether a coupon would pay back.</p>
+
+            <div class="accordion reveal" data-delay="100">
+              <details open>
+                <summary data-cursor="hover">What I built</summary>
+                <p>DuckDB SQL for segments and lapse risk, an A/B and geo-lift experiment toolkit, an Excel LTV / CAC / coupon model, and a Streamlit dashboard. Weekly users are 25% of people and 49% of orders. After one quiet month their chance of another quiet month jumps from 1.3% to 13.2%.</p>
+              </details>
+              <details open>
+                <summary data-cursor="hover">Stack</summary>
+                <ul class="stack"><li>Python</li><li>DuckDB / SQL</li><li>Streamlit</li><li>Excel</li><li>Statistics</li></ul>
+              </details>
+              <details open>
+                <summary data-cursor="hover">My part</summary>
+                <p>I built the full pipeline: clean fact tables, the analyses, sample sizing, the simulated A/B readout on real control outcomes, the geo methods on synthetic cities, and the unit-economics workbook. Behaviour is real. Treatment lift is simulated. Rupee figures are assumptions.</p>
+              </details>
+              <details open>
+                <summary data-cursor="hover">Impact</summary>
+                <ul class="impact">
+                  <li>Shows why win-back should target frequent users after their first lapse</li>
+                  <li>Prices a free nudge vs a blanket coupon before anyone spends</li>
+                  <li>Separates real behaviour from simulated campaign results</li>
+                </ul>
+              </details>
+            </div>
+
+            <div class="project__flow reveal" data-delay="200" aria-label="Pipeline">
+              <span>Orders</span><i></i><span>Segments &amp; lapses</span><i></i><span>Experiment design</span><i></i><span>Unit economics</span><i></i><span>Decision memo</span>
+            </div>
+
+            <div class="project__links reveal" data-delay="260">
+              <a class="btn btn--ghost magnetic" href="https://github.com/yogesh-labs108/retention-growth-lab" target="_blank" rel="noopener" data-cursor="hover"><span>View on GitHub ↗</span></a>
+              <a class="btn btn--ghost magnetic" href="https://github.com/yogesh-labs108/retention-growth-lab/blob/main/docs/memo-plain.md" target="_blank" rel="noopener" data-cursor="hover"><span>Plain memo</span></a>
+              <a class="btn btn--ghost magnetic" href="https://github.com/yogesh-labs108/retention-growth-lab/blob/main/Yogesh_Retention_Growth_Lab_Study_Guide.pdf" target="_blank" rel="noopener" data-cursor="hover"><span>Study guide PDF</span></a>
             </div>
           </div>
         </div>
@@ -604,6 +665,7 @@
             <a class="btn btn--primary magnetic" href="mailto:yogesht25022003@gmail.com?subject=Let%27s%20talk%20growth" data-cursor="hover"><span>Send an email</span></a>
             <button class="btn btn--ghost magnetic" id="copyEmail" data-copy="yogesht25022003@gmail.com" data-cursor="hover"><span>Copy email</span></button>
             <a class="btn btn--ghost magnetic" href="tel:+919080896537" data-cursor="hover"><span>+91 90808 96537</span></a>
+            <a class="btn btn--ghost magnetic" href="resume.html" data-cursor="hover"><span>Creative resume</span></a>
           </div>
         </div>
       </div>
